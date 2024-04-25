@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spreading Humanity</title>
+</head>
+<style>/*TODO:add a tags in each you can donate for*/
+        * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-align: center;
+        }
+
+        body {
+                background-color: rgb(236, 236, 236);
+        }
+
+        div.main>div {
+                margin-bottom: 10vh;
+        }
+
+        nav {
+                background-color: white;
+                font-weight: 500;
+                width: 100vw;
+                height: 10vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                margin-bottom: 0.4rem;
+        }
+
+        nav span {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+
+        a {
+                text-decoration: none;
+                color: black;
+        }
+
+        #logoImg img {
+                height: 90%;
+                width: auto;
+                border-radius: 50%;
+        }
+
+        #home {
+                width: 10vw;
+                height: 10vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+
+        #clothes {
+                width: 10vw;
+                height: 10vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+
+        #clothes:hover {
+                background-color: lightgray;
+        }
+
+        #home:hover {
+                background-color: lightgray;
+        }
+
+        #logoImg:hover {
+                background-color: lightgray;
+        }
+
+        #home:hover {
+                background-color: lightgray;
+        }
+
+        #home-page-img {
+                width: 100vw;
+                height: 80vh;
+        }
+
+        #you-can-donate-to {
+                width: 100vw;
+                height: 90vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        }
+
+        #you-can-donate-to h1 {
+                font-size: 2rem;
+        }
+
+        #you-can-donate-to img {
+                width: 100%;
+                height: auto;
+        }
+
+        #you-can-donate-to-container {
+                width: 100vw;
+                height: 70vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+        }
+
+        #you-can-donate-to-container div {
+                width: 17vw;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+                padding: 1rem;
+                margin: 0 1rem;
+                background-color: white;
+        }
+
+        #you-can-donate-to-container h2 {
+                margin-top: 5%;
+                font-size: 1rem;
+                text-wrap: wrap;
+        }
+
+        .you-can-donate-to-msg {
+                border-right: 2px solid rgb(203, 203, 203);
+                border-left: 2px solid rgb(203, 203, 203);
+                margin: 3px;
+                height: 50%;
+                width: 100%;
+                font-size: 0.8rem;
+                text-wrap: wrap;
+                font-weight: 500;
+        }
+
+        #past-contributions-container {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+        }
+
+        div.bordered {
+                border: 2px solid rgb(203, 203, 203);
+        }
+
+        div.past-contributions-text-container {
+                background-color: white;
+                border-radius: 6px;
+                width: 17%;
+                height: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 5vh;
+        }
+
+        div.past-contributions-text {
+                font-weight: 500;
+                text-wrap: wrap;
+                width: 100%;
+                margin: 1vh 1vw;
+        }
+
+        #footer {
+                width:70 vw;
+                height: 20vh;
+                background-color: white;
+                padding: 2vh 0;
+        }
+
+        #logo-img-footer {
+                width: 3vw;
+                height: auto;
+                border-radius: 50%;
+        }
+
+        #footer-list {
+                margin-top: 1vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                list-style: none;
+                font-size: 10px;
+        }
+</style>
+
+<body>
+        <div class="main">
+                <nav>
+                        <span id="logoImg"><img src="/visuals/homepage/assets/images/logo-img.png" alt=""></span>
+                        <span id="home-nav-span"> <a href="/visuals/homepage/index.html"> Home</a></span>
+                        <span id="cloths-nav-span"><a href="/visuals/clothes/clothes.html">Clothes</a></span>
+                        <span id="food-for-animals-nav-span"><a href="">Food For Animals</a></span>
+                        <span id="food-for-poor-span"><a href="">Food For Poor</a></span>
+                        <span id="donation-for-specially-abled-nav-span"><a href="">Donation For Specially
+                                        Abled</a></span>
+                        <span id="blood-donation-nav-span"><a href="">Donation For Specially Abled</a></span>
+                        <span id="contact-us-nav-span"><a href="">Contact Us</a></span>
+                </nav>
+
+                <div><img id="home-page-img" src="/visuals/homepage/assets/images/home-page-starting-image.png" alt=""></div>
+
+                <div id="you-can-donate-to">
+                        <h1>You can donate for</h1>
+                        <div id="you-can-donate-to-container">
+                                <div class="bordered">
+                                        <img id="you-can-donate-to-cloth-img"
+                                                src="/visuals/homepage/assets/images/you-can-donate-to-cloth-img.webp" alt=""
+                                                width="100%" height="auto">
+                                        <a href="/visuals/clothes/clothes.html"><h2>Clothes</h2></a>
+                                        <div class="you-can-donate-to-msg"></div>
+                                </div>
+                                <div class="bordered">
+                                        <img id="you-can-donate-to-food-for-animals-img"
+                                                src="/visuals/homepage/assets/images/you-can-donate-to-food-for-animals-img.jpg" alt="">
+                                        <h2>Food For Animals</h2>
+                                        <div class="you-can-donate-to-msg"></div>
+                                </div>
+                                <div class="bordered"><a href=""></a>
+                                        <img id="you-can-donate-to-food-for-poor-img"
+                                                src="/visuals/homepage/assets/images/you-can-donate-to-food-for-poor-img.jpg" alt="">
+                                        <h2>Food For Poor</h2>
+                                        <div class="you-can-donate-to-msg"></div>
+                                </div>
+                                <div class="bordered">
+                                        <img id="you-can-donate-to-specially-abled-img"
+                                                src="/visuals/homepage/assets/images/you-can-donate-to-specially-abled-img.jpg" alt="">
+                                        <h2>Donation For Specially Abled</h2>
+                                        <div class="you-can-donate-to-msg"></div>
+                                </div>
+                                <div class="bordered">
+                                        <img id="you-can-donate-to-blood-donation-img"
+                                                src="/visuals/homepage/assets/images/you-can-donate-to-blood-donation-img.jpg" alt="">
+                                        <h2>Donate Blood</h2>
+                                        <div class="you-can-donate-to-msg"></div>
+                                </div>
+                        </div>
+                </div>
+
+                <div id="past-contributions">
+                        <h1>Our Past Contributions</h1>
+                        <div id="past-contributions-container">
+                                <div class="past-contributions-text-container bordered">
+                                        <div class="past-contributions-text"></div>
+                                </div>
+                                <div class="past-contributions-text-container bordered">
+                                        <div class="past-contributions-text"></div>
+                                </div>
+                                <div class="past-contributions-text-container bordered">
+                                        <div class="past-contributions-text"></div>
+                                </div>
+                                <div class="past-contributions-text-container bordered">
+                                        <div class="past-contributions-text"></div>
+                                </div>
+                                <div class="past-contributions-text-container bordered">
+                                        <div class="past-contributions-text"></div>
+                                </div>
+                                <div class="past-contributions-text-container bordered">
+                                        <div class="past-contributions-text"></div>
+                                </div>
+                                <div class="past-contributions-text-container bordered">
+                                        <div class="past-contributions-text"></div>
+                                </div>
+                                <div class="past-contributions-text-container bordered">
+                                        <div class="past-contributions-text"></div>
+                                </div>
+                                <div class="past-contributions-text-container bordered">
+                                        <div class="past-contributions-text"></div>
+                                </div>
+                                <div class="past-contributions-text-container bordered">
+                                        <div class="past-contributions-text"></div>
+                                </div>
+                        </div>
+                </div>
+
+                <div id="footer">
+                        <div><img id="logo-img-footer" src="/visuals/homepage/assets/images/logo-img.png" alt="">
+                                <h6>SPREADING HUMANITY</h6>
+                        </div>
+                        <ul id="footer-list">
+                                <li><a href="">Terms and Conditions</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Refund Policy</a></li>
+                                <li><a href="">Contact Us</a></li>
+                        </ul>
+                </div>
+        </div>
+        <script src="script.js">
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Donate Clothes</title>
+        <style>
+                * {
+                        text-align: center;
+                        padding: 0;
+                        margin: 0;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        box-sizing: border-box;
+                }
+
+                body {
+                        background-color: rgb(236, 236, 236);
+                }
+
+                .main {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                }
+
+                .main>div {
+                        border: 2px solid rgb(203, 203, 203);
+                        border-radius: 6px;
+                        margin-bottom: 20vh;
+                        background-color: white;
+                        width: 70vw;
+                }
+
+                .container {
+                        width: 50vw;
+                        height: 80vh;
+                        background-color: white;
+                        border-radius: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+
+                h1 {
+                        font-size: 2rem;
+                        margin-bottom: 1rem;
+                }
+
+                nav {
+                        background-color: white;
+                        font-weight: 500;
+                        width: 100vw;
+                        height: 10vh;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        margin-bottom: 0.4rem;
+                }
+
+                nav span {
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                }
+
+                a {
+                        text-decoration: none;
+                        color: black;
+                }
+
+                #logoImg img {
+                        height: 90%;
+                        width: auto;
+                        border-radius: 50%;
+                }
+
+                #donation-intro {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 80%;
+                        padding: 5vh 3vw;
+                }
+
+                #donation-intro-donation-msg {
+                        font-size: 1.2rem;
+                        margin-top: 1rem;
+                        width: 80%;
+                }
+
+                #shocking-facts {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 80%;
+                        padding: 5vh 3vw;
+                        line-height: 2rem;
+                }
+
+                #donation-process-div {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 80%;
+                        padding: 5vh 0;
+                }
+
+                .process-details {
+                        width: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 1rem;
+                        padding: 5vh 0;
+                }
+
+                .process-details img {
+                        width: 25%;
+                        height: auto;
+                }
+
+                #donor-form-div {
+                        width: 80%;
+                        height: auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: white;
+                        padding: 5vh 0;
+
+                }
+
+                input {
+                        border: 1px solid rgb(193, 193, 193);
+                        width: 60%;
+                        height: 2rem;
+                }
+
+                h2 {
+                        font-size: 1.5rem;
+                        margin-bottom: 1rem;
+                }
+
+                form {
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                }
+
+                .form-group {
+                        margin-bottom: 3vh;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                }
+
+                button {
+                        padding: 0.5rem 1rem;
+                        background-color: rgb(0, 0, 0);
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        margin-top: 1rem;
+                }
+
+                #footer {
+             
+                        width: 100vw;
+                        height: 20vh;
+                        padding: 2vh 0;
+                }
+                #logo-img-footer {
+                        width: 3vw;
+                        height: auto;
+                        border-radius: 50%;
+                }
+
+                #footer-list {
+                        margin-top: 1vh;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        align-items: center;
+                        list-style: none;
+                        font-size: 10px;
+                }
+        </style>
+</head>
+
+<body>
+        <div class="main">
+                <nav>
+                        <span id="logoImg"><img src="/visuals/clothes/assets/images/logo-img.png" alt=""></span>
+                        <span id="home-nav-span"> <a href="/visuals/homepage/index.html"> Home</a></span>
+                        <span id="cloths-nav-span"><a href="/visuals/clothes/clothes.html">Clothes</a></span>
+                        <span id="food-for-animals-nav-span"><a href="">Food For Animals</a></span>
+                        <span id="food-for-poor-span"><a href="">Food For Poor</a></span>
+                        <span id="donation-for-specially-abled-nav-span"><a href="">Donation For Specially
+                                        Abled</a></span>
+                        <span id="blood-donation-nav-span"><a href="">Donation For Specially Abled</a></span>
+                        <span id="contact-us-nav-span"><a href="">Contact Us</a></span>
+                </nav>
+
+                <div id="donation-intro">
+                        <h1>Donate Clothes</h1>
+                        <h2>Why Donate Clothes?</h2>
+                        <img src="/visuals/clothes/assets/images/cloth-donation-intro-image.jpeg" alt="" width="30%"
+                                height="auto">
+                        <p id="donation-intro-donation-msg">Clothes carry stories, memories, and dreams. When you donate
+                                your gently worn garments, you're not just giving fabric; you're offering hope, dignity,
+                                and a chance for someone else to start a new chapter in their life. Imagine the smiles
+                                your old clothes can bring, the warmth they'll provide, and the confidence they'll
+                                instill. Your donation isn't just about decluttering your closet; it's about weaving a
+                                tapestry of compassion, one thread of generosity at a time. Together, let's clothe the
+                                world with kindness.</p>
+                </div>
+
+                <div id="shocking-facts">
+                        <h1>Shocking Facts</h1>
+                        <p>1. The average American throws away 81 pounds of clothing each year. That's 26 billion pounds
+                                of textiles that end up in landfills annually.</p>
+                        <p>2. The fashion industry is the second-largest polluter in the world, right behind oil.</p>
+                        <p>3. It takes 2,700 liters of water to make one cotton shirt. That's enough water for one
+                                person
+                                to drink for 2.5 years.</p>
+                        <p>4. The fashion industry is responsible for 10% of the world's carbon emissions.</p>
+                        <p>5. The average person buys 68 garments per year but only wears 44 of them.</p>
+                        <p>6. The average garment is worn just 7 times before it's discarded.</p>
+                        <p>7. 85% of all textiles end up in landfills each year.</p>
+                        <p>8. The fashion industry produces 20% of global wastewater.</p>
+                        <p>9. The fashion industry is responsible for 92 million tons of solid waste dumped in landfills
+                                each year.</p>
+                        <p>10. The fashion industry is responsible for 20% of all industrial water pollution worldwide.
+                        </p>
+                </div>
+
+                <div id="donation-process-div">
+                        <h1>How we work</h1>
+                        <div id="donation-process-scheduled-pickup" class="process-details">
+                                <img src="/visuals/clothes/assets/images/scheduled-pickup-image.jpg" alt="">
+                                <div class="process-details-text">
+                                        <p>1. Schedule a pickup</p>
+                                        <p>2. We'll come to your doorstep</p>
+                                        <p>3. Collect your clothes</p>
+
+                                </div>
+                        </div>
+                        <div id="donation-process-donate-at-doorsted" class="process-details">
+                                <img src="/visuals/clothes/assets/images/donate-at-doorstep-img.avif" alt="">
+                                <div class="process-details-text">
+                                        <p>1. Drop off your clothes at our doorstep</p>
+                                        <p>2. We'll collect them</p>
+                                        <p>3. You're done!
+
+                                </div>
+                        </div>
+                        <div id="donation-process-our-network" class="process-details">
+                                <img src="/visuals/clothes/assets/images/our-network-img.jpeg" alt="">
+                                <div class="process-details-text">
+                                        <p>1. We'll connect you with our network of NGOs</p>
+                                        <p>2. Your clothes will reach those in need through our large network</p>
+                                        <p>3. You've made a difference!</p>
+                                </div>
+                        </div>
+                </div>
+                <div id="donor-form-div">
+                        <h1>Fill the Form below</h1>
+                        <form id="donate-clothes-form" method="post">
+                                <div class="form-group">
+                                        <label for="name">Name:</label>
+                                        <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                        <label for="phone">Phone (with country code) :</label>
+                                        <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                        <label for="address">Address:</label>
+                                        <input type="text" id="address" name="address" required>
+                                </div>
+                                <div class="form-group">
+                                        <label for="clothes">Number of Clothes:</label>
+                                        <input type="number" id="number" name="number" required>
+                                </div>
+                                <div class="form-group">
+                                        <label for="email">Enter Your E-mail</label>
+                                        <input type="email" id="email" name="email">
+                                </div>
+                                <div class="form-group">
+                                        <label for="special-instructions">Any special Instruction</label>
+                                        <input type="text" id="special-instructions" name="special-instructions">
+                                </div>
+                                <button type="submit">Donate</button>
+                        </form>
+                </div>
+                <div id="footer">
+                        <div><img id="logo-img-footer" src="/visuals/clothes/assets/images/logo-img.png" alt="">
+                                <h6>SPREADING HUMANITY</h6>
+                        </div>
+                        <ul id="footer-list">
+                                <li><a href="">Terms and Conditions</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Refund Policy</a></li>
+                                <li><a href="">Contact Us</a></li>
+                        </ul>
+                </div>
+        </div>
+        <script>
+                const donateClothesForm = document.getElementById('donate-clothes-form');
+                donateClothesForm.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        const formData = new FormData(donateClothesForm);
+                        const data = {
+                                name: formData.get('name'),
+                                phone: formData.get('phone'),
+                                address: formData.get('address'),
+                                clothes: formData.get('clothes')
+                        };
+                        console.log(data);
+                        donateClothesForm.reset();
+                });
+        </script>
+</body>
+
+</html>
