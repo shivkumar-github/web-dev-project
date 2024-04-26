@@ -162,7 +162,8 @@
                         padding: 2vh 2vw;
                 }
 
-                .form-group input, .form-group select{
+                .form-group input,
+                .form-group select {
                         border: 1px solid rgb(193, 193, 193);
                         width: 70%;
                         height: 2rem;
@@ -209,6 +210,29 @@
                         border-radius: 5px;
                         cursor: pointer;
                         margin-top: 1rem;
+                }
+
+                #qr-code-img-div {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        padding: 5vh 0;
+                }
+
+                #qr-code-img {
+                        width: 30%;
+                        height: auto;
+                }
+
+                #ngo-address-div {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        padding: 5vh 0;
                 }
 
                 #footer {
@@ -318,15 +342,20 @@
                                 <div class="radio-inputs-and-labels-div">
                                         <input type="radio" id="deliver-to-ngo" name="delivery-options-radio"
                                                 value="deliver-to-ngo">
-                                        <label for="deliver-to-ngo">I want to deliver the clothes to your
-                                                address</label>
+                                        <label for="deliver-to-ngo">Deliver to NGO address</label>
                                 </div>
                                 <div class="radio-inputs-and-labels-div">
                                         <input type="radio" id="pick-up-from-location" name="delivery-options-radio"
                                                 value="pick-up-from-location">
-                                        <label for="pick-up-from-location">Pick up from my location</label>
+                                        <label for="pick-up-from-location">Schedule a pickup at your address.</label>
+                                </div>
+                                <div class="radio-inputs-and-labels-div">
+                                        <input type="radio" id="donate-money" name="delivery-options-radio"
+                                                value="donate-money">
+                                        <label for="donate-money">Donate money to buy clothes.</label>
                                 </div>
                         </div>
+                        <div id="ngo-address-div"><a href="">View Our Address</a></div>
                         <div id="donor-form-div">
                                 <h2>Fill the Form below</h2>
                                 <form id="donate-clothes-form" method="post">
@@ -557,8 +586,8 @@
                                                 <div class="old-clothes-new-clothes-div"><input type="checkbox"
                                                                 id="new-clothes" name="new-or-old-checkbox"
                                                                 value="new-clothes"><label for="new-clothes">New
-                                                                clothes</label></div>
-
+                                                                clothes</label>
+                                                </div>
                                         </div>
                                         <div class="form-group">
                                                 <label for="clothes">Number of Clothes:</label>
@@ -575,6 +604,9 @@
                                         </div>
                                         <button type="submit">Donate</button>
                                 </form>
+                        </div>
+                        <div id="qr-code-img-div">
+                                <img id="qr-code-img" src="/visuals/clothes/assets/images/DakshGPayQR.jpeg" alt="">
                         </div>
                 </div>
                 <div id="footer">
@@ -605,22 +637,36 @@
                 });
 
                 const donorFormDiv = document.getElementById('donor-form-div');
-                // Initially hide the donor form
-                if (donorFormDiv) {
+                const qrCodeImgDiv = document.getElementById('qr-code-img-div');
+                const ngoAddressDiv = document.getElementById('ngo-address-div');
+
+                // Initially hide the qrCodeImgDiv, donorFormDiv, ngoAddressDiv
+                if (ngoAddressDiv && donorFormDiv && qrCodeImgDiv) {
+                        qrCodeImgDiv.style.display = 'none';
                         donorFormDiv.style.display = 'none';
+                        ngoAddressDiv.style.display = 'none';
                 }
+
                 const deliveryOptionsDiv = document.getElementById('delivery-options-div');
-                if (deliveryOptionsDiv) {
+                if (deliveryOptionsDiv && donorFormDiv && qrCodeImgDiv) {
                         deliveryOptionsDiv.addEventListener('change', (e) => {
                                 const selectedOption = document.querySelector('input[name="delivery-options-radio"]:checked');
                                 if (selectedOption && selectedOption.value === 'pick-up-from-location') {
                                         donorFormDiv.style.display = 'flex'; // Show the donor form
-                                } else {
+                                        qrCodeImgDiv.style.display = 'none'; // Hide the qr code image
+                                        ngoAddressDiv.style.display = 'none'; // Hide the ngo address
+                                } else if (selectedOption && selectedOption.value === 'deliver-to-ngo') {
                                         donorFormDiv.style.display = 'none'; // Hide the donor form
+                                        qrCodeImgDiv.style.display = 'none'; // Hide the qr code image
+                                        ngoAddressDiv.style.display = 'flex'; // Show the ngo address
+                                }
+                                else if (selectedOption && selectedOption.value === 'donate-money') {
+                                        donorFormDiv.style.display = 'none'; // Hide the donor form
+                                        qrCodeImgDiv.style.display = 'flex'; // Show the qr code image
+                                        ngoAddressDiv.style.display = 'none'; // Hide the ngo address
                                 }
                         });
                 }
-
         </script>
 </body>
 
