@@ -4,7 +4,7 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Donate Clothes</title>
+        <title>Donate blood</title>
         <style>
                 * {
                         text-align: center;
@@ -131,7 +131,6 @@
                 #donor-input-div {
                         width: 80%;
                         height: auto;
-                        /* display: flex; */
                         justify-content: center;
                         align-items: center;
                         background-color: white;
@@ -139,7 +138,7 @@
                 }
 
                 .radio-inputs-and-labels-div {
-                        width: 60%;
+                        width: 30%;
                         margin: auto;
                         text-align: center;
                 }
@@ -169,17 +168,6 @@
                         height: 2rem;
                 }
 
-                .old-clothes-new-clothes-div input[type="checkbox"],
-                .old-clothes-new-clothes-div label {
-                        display: inline-block;
-                        margin: 0.3rem 0.5rem;
-                }
-
-                .form-group input[type="checkbox"] {
-                        width: 0.8rem;
-                        height: 0.8rem;
-                }
-
                 h2 {
                         font-size: 1.5rem;
                         margin-bottom: 1rem;
@@ -200,6 +188,12 @@
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+                }
+
+                .form-group-radio-div input[type="radio"] {
+                        margin-right: 1rem;
+                        width: 1vw;
+                        height: 2vh;
                 }
 
                 button {
@@ -224,15 +218,6 @@
                 #qr-code-img {
                         width: 30%;
                         height: auto;
-                }
-
-                #ngo-address-div {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%;
-                        padding: 5vh 0;
                 }
 
                 #footer {
@@ -270,41 +255,39 @@
                         <span id="food-for-poor-span"><a href="">Food For Poor</a></span>
                         <span id="donation-for-specially-abled-nav-span"><a href="">Donation For Specially
                                         Abled</a></span>
-                        <span id="blood-donation-nav-span"><a href="/visuals/blood donation/blood.html">Blood Donation</a></span>
+                        <span id="blood-donation-nav-span"><a href="/visuals/blood donation/blood.html">Blood
+                                        Donation</a></span>
                         <span id="contact-us-nav-span"><a href="">Contact Us</a></span>
                 </nav>
 
-                <h1>Donate Clothes</h1>
+                <h1>Donate Your Blood</h1>
                 <div id="donation-intro">
-                        <h2>Why Donate Clothes?</h2>
-                        <img src="/visuals/clothes/assets/images/cloth-donation-intro-image.jpeg" alt="" width="30%"
+                        <h2>Why Donate Blood?</h2>
+                        <img src="/visuals/blood donation/assets/blood-donation-transperant-png.png" alt="" width="30%"
                                 height="auto">
-                        <p id="donation-intro-donation-msg">Clothes carry stories, memories, and dreams. When you donate
-                                your gently worn garments, you're not just giving fabric; you're offering hope, dignity,
-                                and a chance for someone else to start a new chapter in their life. Imagine the smiles
-                                your old clothes can bring, the warmth they'll provide, and the confidence they'll
-                                instill. Your donation isn't just about decluttering your closet; it's about weaving a
-                                tapestry of compassion, one thread of generosity at a time. Together, let's clothe the
-                                world with kindness.</p>
+                        <p id="donation-intro-donation-msg">
+                                In the symphony of life, few notes resonate as powerfully as the act of blood donation.
+                                Each drop freely given is a beacon of hope, weaving together the threads of humanity in
+                                its most vulnerable moments. It's not just a donation; it's a lifeline, a silent promise
+                                of survival, comfort, and a chance at a brighter tomorrow. Every donor becomes a hero,
+                                harmonizing to save lives and rewrite destinies. Blood donation isn't just about giving
+                                blood; it's about giving the gift of life itself.</p>
                 </div>
 
                 <div id="shocking-facts">
                         <h1>Shocking Facts</h1>
-                        <p>1. The average American throws away 81 pounds of clothing each year. That's 26 billion pounds
-                                of textiles that end up in landfills annually.</p>
-                        <p>2. The fashion industry is the second-largest polluter in the world, right behind oil.</p>
-                        <p>3. It takes 2,700 liters of water to make one cotton shirt. That's enough water for one
-                                person
-                                to drink for 2.5 years.</p>
-                        <p>4. The fashion industry is responsible for 10% of the world's carbon emissions.</p>
-                        <p>5. The average person buys 68 garments per year but only wears 44 of them.</p>
-                        <p>6. The average garment is worn just 7 times before it's discarded.</p>
-                        <p>7. 85% of all textiles end up in landfills each year.</p>
-                        <p>8. The fashion industry produces 20% of global wastewater.</p>
-                        <p>9. The fashion industry is responsible for 92 million tons of solid waste dumped in landfills
-                                each year.</p>
-                        <p>10. The fashion industry is responsible for 20% of all industrial water pollution worldwide.
-                        </p>
+                        <p>1. Blood is always in demand for surgeries, trauma care, and treating illnesses.</p>
+                        <p>2. Blood components like red blood cells and platelets have short shelf lives, requiring
+                                regular donations.</p>
+                        <p>3. One donation can help multiple patients by providing different blood components.</p>
+                        <p>4. Blood donations are crucial in emergencies and disasters for immediate treatment.</p>
+                        <p>5. Rare blood types are often in short supply, emphasizing the need for regular donors.</p>
+                        <p>6. Cancer patients frequently rely on blood transfusions during treatment.</p>
+                        <p>7. Major surgeries like organ transplants require large quantities of blood.</p>
+                        <p>8. Regular blood transfusions improve the lives of patients with blood disorders.</p>
+                        <p>9. Blood donation fosters community support and unity.</p>
+                        <p>10. Donating blood can have personal health benefits like reducing heart disease risk and
+                                providing health screenings.</p>
                 </div>
 
                 <div id="donation-process-div">
@@ -312,53 +295,47 @@
                         <div id="donation-process-scheduled-pickup" class="process-details">
                                 <img src="/visuals/clothes/assets/images/scheduled-pickup-image.jpg" alt="">
                                 <div class="process-details-text">
-                                        <p>1. Schedule a pickup</p>
-                                        <p>2. We'll come to your doorstep</p>
-                                        <p>3. Collect your clothes</p>
-
+                                        <p>Schedule Your Appointment:</p>
+                                        <p> Let's book your slot! Online or by phone, we'll find the best time for you.
+                                        </p>
                                 </div>
                         </div>
                         <div id="donation-process-donate-at-doorstep" class="process-details">
                                 <img src="/visuals/clothes/assets/images/donate-at-doorstep-img.avif" alt="">
                                 <div class="process-details-text">
-                                        <p>1. Drop off your clothes at our doorstep</p>
-                                        <p>2. We'll collect them</p>
-                                        <p>3. You're done!
-
+                                        <p>Giving Your Blood:</p>
+                                        <p>We'll come to you or meet at our center. A quick check, then a painless
+                                                donation, and
+                                                you're done!</p>
                                 </div>
                         </div>
                         <div id="donation-process-our-network" class="process-details">
                                 <img src="/visuals/clothes/assets/images/our-network-img.jpeg" alt="">
                                 <div class="process-details-text">
-                                        <p>1. We'll connect you with our network of NGOs</p>
-                                        <p>2. Your clothes will reach those in need through our large network</p>
-                                        <p>3. You've made a difference!</p>
+                                        <p>Sending Your Blood Out:</p>
+                                        <p> After testing, your blood joins our network. From local hospitals to
+                                                emergencies,
+                                                it's ready to save lives!</p>
                                 </div>
                         </div>
                 </div>
                 <div id="donor-input-div">
                         <h1>How you wish to donate?</h1>
-                        <div id="delivery-options-div">
+                        <div id="donation-options-div">
                                 <div class="radio-inputs-and-labels-div">
-                                        <input type="radio" id="deliver-to-ngo" name="delivery-options-radio"
-                                                value="deliver-to-ngo">
-                                        <label for="deliver-to-ngo">Deliver to NGO address</label>
+                                        <input type="radio" id="donate-blood" name="donation-options-radio"
+                                                value="donate-blood">
+                                        <label for="donate-blood">Donate Blood</label>
                                 </div>
                                 <div class="radio-inputs-and-labels-div">
-                                        <input type="radio" id="pick-up-from-location" name="delivery-options-radio"
-                                                value="pick-up-from-location">
-                                        <label for="pick-up-from-location">Schedule a pickup at your address.</label>
-                                </div>
-                                <div class="radio-inputs-and-labels-div">
-                                        <input type="radio" id="donate-money" name="delivery-options-radio"
+                                        <input type="radio" id="donate-money" name="donation-options-radio"
                                                 value="donate-money">
-                                        <label for="donate-money">Donate money to buy clothes.</label>
+                                        <label for="donate-money">Donate money to help us in our cause.</label>
                                 </div>
                         </div>
-                        <div id="ngo-address-div"><a href="">View Our Address</a></div>
                         <div id="donor-form-div">
                                 <h2>Fill the Form below</h2>
-                                <form id="donate-clothes-form" method="post">
+                                <form id="donate-blood-form" method="post">
                                         <div class="form-group">
                                                 <label for="name">Name:</label>
                                                 <input type="text" id="name" name="name" required>
@@ -576,22 +553,44 @@
                                                 <input type="text" id="address" name="address" required>
                                         </div>
                                         <div class="form-group">
-
-                                                Are the clothes new or old?
-                                                <div class="old-clothes-new-clothes-div"><input type="checkbox"
-                                                                id="old-clothes" name="new-or-old-checkbox"
-                                                                value="old-clothes">
-                                                        <label for="old-clothes">Old clothes</label>
+                                                Will you donate blood at our location or should we come to your
+                                                location?
+                                                <div class="donate-location-options-div form-group-radio-div"><input
+                                                                type="radio" id="our-location"
+                                                                name="donate-location-options" value="our-location">
+                                                        <label for="old-clothes">medical facilities</label>
                                                 </div>
-                                                <div class="old-clothes-new-clothes-div"><input type="checkbox"
-                                                                id="new-clothes" name="new-or-old-checkbox"
-                                                                value="new-clothes"><label for="new-clothes">New
-                                                                clothes</label>
+                                                <div class="old-clothes-new-clothes-div form-group-radio-div"><input
+                                                                type="radio" id="at-doorstep"
+                                                                name="donate-location-options"
+                                                                value="at-doorstep"><label for="at-doorstep">At
+                                                                doorstep</label>
                                                 </div>
                                         </div>
                                         <div class="form-group">
-                                                <label for="clothes">Number of Clothes:</label>
-                                                <input type="number" id="number" name="number" required>
+                                                Do you have any disease or are you on any medication?
+                                                <div class="donate-location-options-div form-group-radio-div"><input
+                                                                type="radio" id="donor-disease-yes" name="donor-disease"
+                                                                value="yes">
+                                                        <label for="donor-disease-yes">Yes.</label>
+                                                </div>
+                                                <div class="donor-disease-div form-group-radio-div"><input type="radio"
+                                                                id="donor-disease-no" name="donor-disease"
+                                                                value="no"><label for="donor-disease-no">No.</label>
+                                                </div>
+                                        </div>
+                                        <div class="form-group">
+                                                Are you an active donor?
+                                                <div class="donate-location-options-div  form-group-radio-div"><input
+                                                                type="radio" id="active-donor-yes" name="active-donor"
+                                                                value="yes">
+                                                        <label for="active-donor-yes">Yes.</label>
+                                                </div>
+                                                <div class="donate-location-options-div  form-group-radio-div"><input
+                                                                type="radio" id="active-donor-no" name="active-donor"
+                                                                value="no">
+                                                        <label for="active-donor-no">No.</label>
+                                                </div>
                                         </div>
                                         <div class="form-group">
                                                 <label for="email">Enter Your E-mail</label>
@@ -606,11 +605,11 @@
                                 </form>
                         </div>
                         <div id="qr-code-img-div">
-                                <img id="qr-code-img" src="/visuals/clothes/assets/images/DakshGPayQR.jpeg" alt="">
+                                <img id="qr-code-img" src="/visuals/blood donation/assets/GPayQR.jpeg" alt="">
                         </div>
                 </div>
                 <div id="footer">
-                        <div><img id="logo-img-footer" src="/visuals/clothes/assets/images/logo-img.png" alt="">
+                        <div><img id="logo-img-footer" src="/visuals/blood donation/assets/logo-img.png" alt="">
                                 <h6>SPREADING HUMANITY</h6>
                         </div>
                         <ul id="footer-list">
@@ -621,11 +620,12 @@
                         </ul>
                 </div>
         </div>
+
         <script>
-                const donateClothesForm = document.getElementById('donate-clothes-form');
-                donateClothesForm.addEventListener('submit', (e) => {
+                const donateBloodForm = document.getElementById('donate-blood-form');
+                donateBloodForm.addEventListener('submit', (e) => {
                         e.preventDefault();
-                        const formData = new FormData(donateClothesForm);
+                        const formData = new FormData(donateBloodForm);
                         const data = {
                                 name: formData.get('name'),
                                 phone: formData.get('phone'),
@@ -633,37 +633,30 @@
                                 clothes: formData.get('clothes')
                         };
                         console.log(data);
-                        donateClothesForm.reset();
+                        donateBloodForm.reset();
                 });
 
                 const donorFormDiv = document.getElementById('donor-form-div');
                 const qrCodeImgDiv = document.getElementById('qr-code-img-div');
-                const ngoAddressDiv = document.getElementById('ngo-address-div');
 
-                // Initially hide the qrCodeImgDiv, donorFormDiv, ngoAddressDiv
-                if (ngoAddressDiv && donorFormDiv && qrCodeImgDiv) {
+                // Initially hide the qrCodeImgDiv, donorFormDiv
+                if (donorFormDiv && qrCodeImgDiv) {
                         qrCodeImgDiv.style.display = 'none';
                         donorFormDiv.style.display = 'none';
-                        ngoAddressDiv.style.display = 'none';
                 }
 
-                const deliveryOptionsDiv = document.getElementById('delivery-options-div');
-                if (deliveryOptionsDiv && donorFormDiv && qrCodeImgDiv) {
-                        deliveryOptionsDiv.addEventListener('change', (e) => {
-                                const selectedOption = document.querySelector('input[name="delivery-options-radio"]:checked');
-                                if (selectedOption && selectedOption.value === 'pick-up-from-location') {
+                const donationOptionsDiv = document.getElementById('donation-options-div');
+                if (donationOptionsDiv && donorFormDiv && qrCodeImgDiv) {
+                        donationOptionsDiv.addEventListener('change', (e) => {
+                                const selectedOption = document.querySelector('input[name="donation-options-radio"]:checked');
+                                if (selectedOption && selectedOption.value === 'donate-blood') {
                                         donorFormDiv.style.display = 'flex'; // Show the donor form
                                         qrCodeImgDiv.style.display = 'none'; // Hide the qr code image
-                                        ngoAddressDiv.style.display = 'none'; // Hide the ngo address
-                                } else if (selectedOption && selectedOption.value === 'deliver-to-ngo') {
-                                        donorFormDiv.style.display = 'none'; // Hide the donor form
-                                        qrCodeImgDiv.style.display = 'none'; // Hide the qr code image
-                                        ngoAddressDiv.style.display = 'flex'; // Show the ngo address
                                 }
                                 else if (selectedOption && selectedOption.value === 'donate-money') {
                                         donorFormDiv.style.display = 'none'; // Hide the donor form
                                         qrCodeImgDiv.style.display = 'flex'; // Show the qr code image
-                                        ngoAddressDiv.style.display = 'none'; // Hide the ngo address
+
                                 }
                         });
                 }
