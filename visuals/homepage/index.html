@@ -37,21 +37,57 @@
                 justify-content: space-around;
                 margin-bottom: 0.4rem;
                 z-index: 1000;
-                /* Adjust the z-index value as needed */
+        }
+
+        #hover-box {
+                position: absolute;
+                top: 1vh;
+                left: 0vw;
+                background-color: rgb(59, 59, 59);
+                border-radius: 4px;
+                height: 8vh;
+                z-index: -1;
+                width: 12.5vw;
+                transition: transform 0.3s ease, width 0.3s ease;
+                transform: translateX(-100%);
+        }
+
+        nav span {
+                position: relative;
+                width: 12.5vw;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
         }
 
         nav a {
                 text-decoration: none;
-                color: rgb(121, 121, 121);
-                transform: translateY(2px);
-                transition: transform 0.3s ease;
+                color: rgb(98, 98, 98);
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
         }
 
-        nav a:hover {
-                text-decoration: none;
-                color: black;
-                transform: translateY(0);
+        #home a {
+                color: white;
         }
+
+        #home:not(:hover) a {
+                color: rgb(121, 121, 121);
+        }
+
+        nav span:hover a {
+                color: white;
+                text-decoration: none;
+                color: white;
+                transition: transform 0.3s ease;
+                transform: translateY(-2px);
+                cursor: pointer;
+        }
+
 
         .divs-to-transform {
                 transform: translateY(6px);
@@ -61,14 +97,6 @@
         .divs-to-transform:hover {
                 transform: translateY(0);
                 /* Resetting the transformation on hover */
-        }
-
-
-        nav span {
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
         }
 
         a {
@@ -300,7 +328,7 @@
                 background-color: rgb(203, 203, 203);
                 transform: translateY(-2px);
                 transition: transform 0.3s ease;
-                
+
         }
 
         #footer {
@@ -416,13 +444,14 @@
                                         class="content-to-transform">Blood
                                         Donation</a></span>
                         <span id="contact-us"><a href="" class="content-to-transform">Contact Us</a></span>
+                        <div id="hover-box"></div>
                 </nav>
 
                 <div class="image-container">
                         <img id="home-page-img" src="/visuals/homepage/assets/images/HOMEPAGE2ND.png.jpg" alt="">
                         <div class="message">Be a hero in someone's story.</div>
-                    </div>
-                    
+                </div>
+
 
                 <div id="you-can-donate-to">
                         <h1>Be a hero in someone's story.</h1>
@@ -609,47 +638,39 @@
         </script>
         <script>
 
-                document.addEventListener('DOMContentLoaded', function () {
-                        const slides = document.querySelector('.slides');
-                        const slide = Array.from(slides.children);
-                        const counter = document.querySelector('.counter');
-                        const size = slide[0].clientWidth;
-                        let slideIndex = 0;
+                // Add this JavaScript
+                const hoverBox = document.getElementById('hover-box');
+                const navItems = document.querySelectorAll('nav span');
 
-                        // Set up the slider
-                        slide.forEach((slide, i) => {
-                                slide.style.left = `${size * i}px`;
+                // Set initial position to the "Home" section
+                const homeSection = document.getElementById('home');
+                const homeRect = homeSection.getBoundingClientRect();
+                hoverBox.style.transform = `translateX(${homeRect.left}px)`;
+                hoverBox.style.width = `${homeRect.width}px`;
+
+                // Function to reset the hover box position to the "Home" section
+                function resetHoverBox() {
+                        hoverBox.style.transform = `translateX(${homeRect.left}px)`;
+                        hoverBox.style.width = `${homeRect.width}px`;
+                }
+
+                // Event listeners for each navigation item
+                navItems.forEach(item => {
+                        item.addEventListener('mouseover', function () {
+                                if (this.id != 'logoImg') {
+                                        const rect = this.getBoundingClientRect();
+                                        hoverBox.style.transform = `translateX(${rect.left}px)`;
+                                        hoverBox.style.width = `${rect.width}px`;
+                                }
+
                         });
 
-                        // Create and append dots
-
-                        const dots = Array.from({ length: slide.length }, (_, i) => {
-                                const dot = document.createElement('div');
-                                dot.classList.add('dot');
-                                dot.addEventListener('click', () => {
-                                        slideIndex = i;
-                                        updateSlide();
-                                });
-                                counter.appendChild(dot);
-                                return dot;
-                        });
-
-                        // Update the slide                   
-                        const updateSlide = () => {
-                                slides.style.transform = `translateX(${-size * slideIndex}px)`;
-                                dots.forEach((dot, i) => {
-                                        dot.classList.toggle('active', i === slideIndex);
-                                });
-                        };
-
-                        const showNextSlide = () => {
-                                slideIndex = (slideIndex + 1) % slide.length;
-                                updateSlide();
-                        };
+                        item.addEventListener('mouseleave', resetHoverBox);
                 });
 
-                // Set up the automatic slide show
-                setInterval(showNextSlide, 3000);
+                // Event listener for the navigation bar itself
+                document.querySelector('nav').addEventListener('mouseleave', resetHoverBox);
+
         </script>
 </body>
 
