@@ -4,695 +4,861 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Spreading Humanity</title>
-</head>
-<style>
-        /*TODO:add a tags in each you can donate for*/
-        * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                text-align: center;
-        }
+        <title>Donate food for poor</title>
+        <style>
+            * {
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
 
-        body {
-                background-color: rgb(236, 236, 236);
-        }
-
-        div.main>div {
-                margin-bottom: 10vh;
-        }
-
-        nav {
-                position: fixed;
-                top: 0;
-                left: 0;
-                background-color: white;
-                font-weight: 500;
-                width: 100vw;
-                height: 10vh;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                margin-bottom: 0.4rem;
-                z-index: 1000;
-        }
-
-        #hover-box {
-                position: absolute;
-                top: 1vh;
-                left: 0vw;
-                background-color: rgb(59, 59, 59);
-                border-radius: 4px;
-                height: 8vh;
-                z-index: -1;
-                width: 12.5vw;
-                transition: transform 0.3s ease, width 0.3s ease;
-                transform: translateX(-100%);
-        }
-
-        nav span {
-                position: relative;
-                width: 12.5vw;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-        }
-
-        nav a {
-                text-decoration: none;
-                color: rgb(98, 98, 98);
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-        }
-
-        #home a {
-                color: white;
-        }
-
-        #home:not(:hover) a {
-                color: rgb(121, 121, 121);
-        }
-
-        nav span:hover a {
-                color: white;
-                text-decoration: none;
-                color: white;
-                transition: transform 0.3s ease;
-                transform: translateY(-2px);
-                cursor: pointer;
-        }
+body {
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* Make the body taller for scrolling */
+    background-color: #0413163f; /* Initial background color */
+  }
+  
 
 
-        .divs-to-transform {
-                transform: translateY(6px);
-                transition: transform 0.3s ease;
-        }
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-        .divs-to-transform:hover {
-                transform: translateY(0);
-                /* Resetting the transformation on hover */
-        }
+.main>div {
+    border: 2px solid rgb(203, 203, 203);
+    border-radius: 6px;
+    margin-bottom: 20vh;
+   
+    width: 70vw;
+}
+.main{
+    /*background-image: url(https://media.istockphoto.com/id/1209474593/photo/child-sorting-clothes-for-donation.jpg?s=612x612&w=0&k=20&c=fH9ywKBoQ33rbzdvoaO3hAM7txymuYXZzMNiozp4Z60=); */
+    background-position: center;
+    background-size: cover;
+    /* z-index: -1; */
+}
+/* #page1{
+   
+} */
+.container {
+    width: 50vw;
+    height: 80vh;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        a {
-                text-decoration: none;
-                color: black;
-        }
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+/* #cursor{
+    border: none;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(5, 82, 85);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 200;
+} */
+#cursor-blur{
+    height:200px;
+    width: 200px;
+    background-color: rgba(5, 82, 85, 0.682);
+    border-radius: 50%;
+    position:fixed;
+    z-index: 9;
+    filter: blur(40px);
+}
+nav {
+    position: fixed;
+    top: 0;
+    font-size: larger;
+    font-weight: 500;
+    width: 100vw;
+    height: 145px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 0.4rem;
+    z-index: 100;
+    
+}
+nav span#logoImg img{
+    height: 90px;
+    width: 81px;
+    border-radius: 100%;
+}
+nav span#home-nav-span a{
+    color: white;
+   
+    
+}
+/* nav span#home-nav-span span#nav-hover-home{
+    height: 50px;
+    width: 90px;
+    margin-left: 20px;
+    background-color:orangered;
+    z-index: -1;       
+}
+nav span#home-nav-span span#nav-hover-home :hover{
 
-        #home {
-                width: 10vw;
-                height: 10vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-        }
+} */
+/* nav span#home-nav-span{
+    transition: all ease-in-out 0.2s;
+}
+nav span#home-nav-span:hover{
+    background-color: orangered;
+} */
+nav span#cloths-nav-span a{
+    color: white;
+    
+}
+nav span#food-for-animals-nav-span a{
+    color: white;
+}
+nav span#food-for-poor-span a{
+    color: white;
+}
+nav span#donation-for-specially-abled-nav-span a{
+    color: white;
+}
+nav span#blood-donation-nav-span a{
+    color: white;
+}
+nav span#contact-us-nav-span a{
+    color: white;
+}
+nav span {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        #clothes {
-                width: 10vw;
-                height: 10vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-        }
+a {
+    text-decoration: none;
+    color: black;
+}
 
-        #logoImg img {
-                height: 90%;
-                width: auto;
-                border-radius: 50%;
-        }
+#donation-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 170px;
+    align-items: center;
+    width: 60%;
+    height:520px;
+    padding: 5vh 3vw;
+    border-radius: 20px;
+    border: none;
+    font-weight: 400;
+    background-color: rgb(5, 82, 85); /*before this used dark turquoise*/
+    transition: all ease 0.8s;
+    z-index: 99;
+    
+    
+}
+#donation-intro h1{
+    font-size: 3rem;
+    color:transparent;
+    -webkit-text-stroke: 1px greenyellow; 
+    position: relative;
+    
+}
+/* #donation-intro h1{
+    content: "";
+    position:absolute;
+    bottom: -2px;
+    width: 100%;
+    background: greenyellow;
+    border-radius: 50px;
+    transform: scaleX(0);
+    transition: transform 0.2s linear;
+}
+#donation-intro h1:hover::after{
+    transform: scaleX(1);   
+} */
+/* #donation-intro h1::before{
+    content: "Donate Clothes";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: greenyellow;
+    border-right: 8px solid greenyellow;
+    transition: 1s ease-in-out;
+} */
+#donation-intro:hover h1{
+    color: rgb(173,255,47);    /*rgb(173,255,47) for default og greenyellow*/
+    filter: drop-shadow(0 0 25px greenyellow);  /*ADD TRANSITION TIME FOR HEADER TOO*/
+}
+p#donation-intro-donation-msg{
+    color: rgb(5, 82, 85); /*check error why text visible when not hovering?*/
+}
+/*rgba(8, 143, 145, 0.732)*/
+#donation-intro:hover{
+    background-color: black;  /*#769e05 for green color*/
+    transform: scale(1.1);
+}
+#donation-intro:hover p#donation-intro-donation-msg{
+    color: darkturquoise;
+}
+#donation-intro-donation-msg {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    width: 80%;
+}
+#scroller{
+    position: relative;
+    width: 100vw;
+    white-space: nowrap;
+    border: none;
+    z-index: 99;
+    overflow-x: auto;
+    overflow-y: hidden;
+  
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in-1{
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 20px;
+    animation-name: scroll;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scroller-in-2{
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 20px;
+    animation-name: scroll;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scroller h1{
+    display: inline-block;
+    font-size: 130px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(5, 82, 85);
+    transition: all linear 0.5s;
+}
+#scroller h1:hover{
+    color: darkturquoise;
+}
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#shocking-facts {
+    background-color: rgb(5, 82, 85);
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    padding: 5vh 3vw;
+    line-height: 2rem;
+    transition: all ease 0.8s;
+    z-index: 99;
+}
+#shocking-facts:hover{
+    background-color: black;  /*rgba(8, 143, 145, 0.732) originally used*/
+    transform: scale(1.1);
+}
+#shocking-facts h1{
+   text-align: center;
+   font-size: 3rem;
+   color:transparent;
+   -webkit-text-stroke: 1px greenyellow; 
+   position: relative;
+}
+#shocking-facts:hover h1{
+    color: rgb(173,255,47);   
+    filter: drop-shadow(0 0 25px greenyellow);
+}
+#shocking-facts:hover #para p{
+    color: darkturquoise
+}
+#shocking-facts #para{
+    font-size: larger;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 
-        .image-container {
-                position: relative;
-                display: inline-block;
-        }
+}
+#shocking-facts #para p{
+    color: rgb(5, 82, 85);
+}
+/* Hide the text initially */
+.typewriter p {
+    height: 600px;
+    font-size: 100px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap; 
+    border-right: .15em solid orange; 
+   
+    margin: 0 auto; 
+    z-index: 99;
+    display:inline-block;
+    /* Adjust speed for faster or slower typing effect */
+    animation: typing 4.5s steps(40, end), blink-caret .75s step-end infinite alternate;
+    flex-wrap: wrap;
+    word-wrap: break-word;
 
-        .image-container img {
-                display: block;
-                width: 100%;
-                height: auto;
-        }
+   
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The blinking cursor */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  
+#donation-process-div {
+    background-color: rgb(5, 82, 85);
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 5vh 0;
+    transition: all ease 0.8s;
+    z-index: 99;
+}
+#donation-process-div .video iframe{
+    border: black;
+    border-width: 10px;
+}
+#donation-process-div h1{
+    font-size: 3rem;
+   color:transparent;
+   -webkit-text-stroke: 1px greenyellow; 
+   position: relative;
+}
+#donation-process-div:hover{
+    background-color: black;  /*rgba(0, 206, 209, 0.395) og used*/
+    transform: scale(1.1);
+}
+#donation-process-div:hover h1{
+    color: rgb(173,255,47);   
+    filter: drop-shadow(0 0 25px greenyellow);
+}
+#donation-process-div:hover #donation-process-scheduled-pickup p{
+    color: darkturquoise;
+}
+#donation-process-div:hover  #donation-process-donate-at-doorsted p{
+    color: darkturquoise;
+}
+#donation-process-div:hover  #donation-process-our-network p{
+    color: darkturquoise;
 
-        .message {
-                position: absolute;
-                top: 50%;
-                left: 0%;
-                transform: translateY(-50%);
-                color: white;
-                font-size: 4vw;
-                font-weight: 600;
-                width: 30%;
-        }
+}
+#donation-process-div #steps-para{
+    font-weight: 800;
+}
+#donation-process-scheduled-pickup p, #donation-process-donate-at-doorsted p, #donation-process-our-network p{
+    font-size: larger;
+    color: rgb(5, 82, 85);
+}
+#donation-process-div #steps-para p{
+    color: rgb(5, 82, 85);
+}
+#donation-process-div:hover #steps-para p{
+    color: yellow;
+    text-shadow: rgb(173,255,47) 5 -10px 20px;
+}
+.process-details {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 5vh 0;
+}
 
-        .image-container::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(to right, rgb(0, 0, 0), transparent);
-        }
+.process-details img {
+    width: 25%;
+    height: auto;
+}
+#cards-container{
+    height: 600px;
+    width: 100vw;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 
-        #home-page-img {
-                width: 100vw;
-                height: 90vh;
-        }
+}
+.card{
+    position: relative;
+    height: 80%;
+    width: 22%;
+    border-radius: 20px;
+    background-position: center;
+    object-fit: cover;
+    padding: 40px;
+    color: black;
+    overflow: hidden;
+    z-index: 99;
+    transition: all ease 0.6s;
+    animation: floatUpDown 1.5s infinite alternate ;
+}
+#card1 {
+    animation-delay: 0s;
+}
 
-        .main>div>h1 {
-                font-size: 2rem;
-                font-weight: 600;
-                margin-bottom: 2vh;
-        }
+#card2 {
+    animation-delay: 0.5s;
+}
 
-        #you-can-donate-to {
-                width: 100vw;
-                height: 90vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-        }
+#card3 {
+    animation-delay: 1s;
+}
 
-        #you-can-donate-to-container {
-                width: 100vw;
-                height: 70vh;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                flex-wrap: wrap;
-        }
+#card4 {
+    animation-delay: 1.5s;
+}
 
-        #you-can-donate-to-container>div {
-                width: 17vw;
-                height: 90%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                border-radius: 6px;
-                padding: 1rem;
-                margin: 0 0.5vw;
-                background-color: white;
-        }
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-25px);
+    }
+}
+.card img{
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width:100%;
+    background-color: darkturquoise;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.overlay p{
+    font-size: 40px;
+    font-weight: 350;
+    color: black;
+    
+}
+.overlay h1{
+    color: black;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.card:hover .overlay {
+    opacity: 1;
+}
 
-        div.you-can-donate-to-img-div {
-                border-bottom: 2px solid rgb(203, 203, 203);
-                width: 100%;
-                height: 40%;
-        }
+#donor-form-div {
+    border: none;
+    border-radius: 20px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 5vh 0;
+    z-index: 99;
 
-        #you-can-donate-to-container img {
-                width: 95%;
-                height: 95%;
-        }
+}
+#donor-form-div button{
+    background-color: orangered;
+    transition: 0.3s;
+}
+#donor-form-div button:hover{
+     background-color: darkturquoise;
+}
+#donate-clothes-form{
+    font-size: larger;
+}
 
-        #you-can-donate-to-container a {
-                width: 100%;
-                height: 10%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-                color: blue;
-                font-size: 90%;
-                text-align: left;
-                border-radius: 3px;
-                background-color: rgb(218, 218, 218);
-        }
+input {
+    border: 1px solid rgb(193, 193, 193);
+    width: 60%;
+    height: 2rem;
+}
 
-        #you-can-donate-to-container a:hover {
-                background-color: rgb(218, 218, 218);
-                transform: translateY(-3px);
-                transition: transform 0.3s ease;
-        }
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
 
-        #you-can-donate-to-container h2 {
-                margin-top: 5%;
-                font-size: 1rem;
-                text-wrap: wrap;
-        }
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-        div.you-can-donate-to-msg {
-                height: 25%;
-                width: 90%;
-                margin-top: 10%;
-                font-size: calc(0.5rem + 0.5vw);
-                /*TODO: Adjust font size */
-                word-wrap: break-word;
-                /* or overflow-wrap: break-word; */
-                font-weight: 500;
-                color: rgb(109, 108, 108);
-        }
+.form-group {
+    margin-bottom: 3vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-        #past-contributions-container {
-                width: 100vw;
-                height: auto;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                flex-wrap: wrap;
-        }
+button {
+    padding: 0.5rem 1rem;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+    margin-top: 1rem;
+}
 
-        div.bordered {
-                border: 2px solid rgb(203, 203, 203);
-        }
-
-        #past-contributions-container>div {
-                background-color: white;
-                border-radius: 6px;
-                width: 75vw;
-                height: 50vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-top: 5vh;
-                flex-wrap: wrap;
-        }
-
-        div.past-contribution-imge-divs {
-                width: 50%;
-                height: 90%;
-                padding: 1vh 3vw;
-        }
-
-        div.past-contribution-imge-divs img {
-                width: 100%;
-                height: 100%;
-        }
-
-        div.past-contribution-text-content {
-                width: 50%;
-                height: 90%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 1vh 3vw;
-        }
-
-        div.past-contributions-description-text {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 1.3vw;
-
-                font-weight: 500;
-                text-wrap: wrap;
-                width: 100%;
-                height: 80%;
-        }
-
-        div.past-contribution-text-content a {
-                width: 100%;
-                height: 20%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-                color: blue;
-                font-size: 1.3vw;
-                text-align: left;
-                background-color: rgb(218, 218, 218);
-                border-radius: 6px;
-        }
-
-        div.past-contribution-text-content a:hover {
-                background-color: rgb(203, 203, 203);
-                transform: translateY(-2px);
-                transition: transform 0.3s ease;
-
-        }
-
-        #footer {
-                width: 100vw;
-                height: auto;
-                background-color: white;
-                padding: 7vh 4vw;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                margin-bottom: 0;
-                left: 15vw;
-
-        }
-
-        #footer-left {
-                width: 70%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-        }
-
-        #logo-img-footer {
-                width: 3vw;
-                height: auto;
-                border-radius: 50%;
-                float: left;
-        }
-
-        #left-footer-list {
-                margin-top: 1vh;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                list-style: none;
-                font-size: 17px;
-        }
-
-        #left-footer-list li {
-                margin: 0 1vw;
-        }
-
-        #footer-regulation-copyright {
-                margin-top: 1vh;
-                font-size: 10px;
-        }
-
-        #footer-right {
-                width: 30%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-        }
-
-        #right-footer-list {
-                margin-top: 1vh;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                list-style: none;
-                font-size: 10px;
-        }
-
-        #right-footer-list li {
-                margin: 0 1vw;
-        }
-
-        .footer-svg-divs {
-                width: 2vw;
-                height: auto;
-        }
-
-        #footer-right img {
-                border-radius: 50%;
-                width: 4vw;
-                height: auto;
-                opacity: 0.5;
-        }
-
-        #footer-right img:hover {
-                opacity: 1;
-        }
-</style>
+#footer {
+    background-color:rgb(5,82,85) ;
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+    width: 100vw;
+    height: 30vh;
+    padding: 2vh 0;
+    margin-bottom: 0;
+    border: none;
+    z-index: 99;
+}
+#logo-img-footer {
+    width: 90px;
+    height: 81px;
+    border-radius: 50%;
+}
+#footer h6{
+    font-size: larger;
+    color: black;
+}
+#footer-list {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 18px;
+}
+#footer-list a:hover{
+    color: orangered;
+}
+video{
+    height:400px;
+    width: 800px;
+    border: none;
+    border-radius: 8px;
+}
+        </style>
+        
 </head>
 
 <body>
         <div class="main">
-                <nav id="">
-                        <span id="logoImg">
-                                <img src="/visuals/homepage/assets/images/logo-img.png" alt="">
-                        </span>
-                        <span id="home"><a href="/visuals/homepage/index.html"
-                                        class="content-to-transform">Home</a></span>
-                        <span id="clothes"><a href="/visuals/clothes/clothes.html"
-                                        class="content-to-transform">Clothes</a></span>
-                        <span id="food-for-animals"><a href="/visuals/food for animals/foodAnimals.html"
-                                        class="content-to-transform">Food For
-                                        Animals</a></span>
-                        <span id="food-for-poor"><a href="/visuals/food for poor/foodPoor.html"
-                                        class="content-to-transform">Food For
-                                        Poor</a></span>
-                        <span id="donation-for-specially-abled"><a
-                                        href="/visuals/donation for specially abled/speciallyAbled.html"
-                                        class="content-to-transform">Donation For Specially Abled</a></span>
-                        <span id="blood-donation"><a href="/visuals/blood donation/blood.html"
-                                        class="content-to-transform">Blood
-                                        Donation</a></span>
-                        <span id="contact-us"><a href="" class="content-to-transform">Contact Us</a></span>
-                        <div id="hover-box"></div>
+               
+                <nav>
+                        <span id="logoImg"><img src="logo-img.png" alt=""></span>
+                        <span id="home-nav-span">
+                                
+                                <span id="nav-hover-home">
+
+                                </span>
+
+                                <a href="/visuals/homepage/index.html"> Home
+                                        
+                                </a></span>
+                        <span id="cloths-nav-span"><a href="/visuals/clothes/clothes.html">Clothes</a></span>
+                        <span id="food-for-animals-nav-span"><a href="">Food For Animals</a></span>
+                        <span id="food-for-poor-span"><a href="">Food For Poor</a></span>
+                        <span id="donation-for-specially-abled-nav-span"><a href="">Donation For Specially
+                                        Abled</a></span>
+                        <span id="blood-donation-nav-span"><a href="">Blood Donation</a></span>
+                        <span id="contact-us-nav-span"><a href="">Contact Us</a></span>
                 </nav>
-
-                <div class="image-container">
-                        <img id="home-page-img" src="/visuals/homepage/assets/images/HOMEPAGE2ND.png.jpg" alt="">
-                        <div class="message">Be a hero in someone's story.</div>
+                <div id="cursor"></div>
+                <div id="cursor-blur"></div>
+                <div id="donation-intro">
+                        <h1>Donate food for poor</h1>
+                        <h2>Why Donate food?</h2>
+                        <img src="donating-food-to-poor.jpg" alt="" width="25%"
+                                height="auto">
+                        <p id="donation-intro-donation-msg">Donating food is an expression of our shared moral duty to care for one another. It is a compassionate response to the pressing issue of hunger, ensuring that no one in our community goes without sustenance. Your generosity serves as a beacon of empathy, embodying the values of compassion and solidarity. By extending a helping hand through food donations, you embody the very essence of human decency and uphold the inherent worth and dignity of every individual. Let us unite in this moral imperative to nourish bodies and uplift spirits, forging a brighter, more equitable future for all.</p>
                 </div>
+                
+                <div id="scroller">
+                        <div id="scroller-in-1">
+                                <h1>Donate with grace, a meal to embrace!</h1>
+                                
 
+                        </div>
+                        <div id="scroller-in-2">
+                                <h1>Donate with grace, a meal to embrace!</h1>
+                        </div>
+                </div>
+                <div id="shocking-facts">
+                        <h1>Shocking Facts</h1>
+                        <div id="para">
+                            <p>1. Approximately 820 million people worldwide suffer from chronic hunger, while one-third of all food produced globally is wasted.</p>
 
-                <div id="you-can-donate-to">
-                        <h1>Be a hero in someone's story.</h1>
-                        <div id="you-can-donate-to-container">
-                                <div class="bordered divs-to-transform">
-                                        <div class="you-can-donate-to-img-div"> <img id="you-can-donate-to-cloth-img"
-                                                        src="/visuals/homepage/assets/images/you-can-donate-to-cloth-img.webp"
-                                                        alt="">
-                                        </div>
-                                        <h2>Clothes</h2>
-                                        <div class="you-can-donate-to-msg"></div>
-                                        <a href="/visuals/clothes/clothes.html">
-                                                Donate Now
-                                        </a>
+<p>2. In the United States, nearly 40% of food goes uneaten, contributing to environmental issues like greenhouse gas emissions.</p>
+
+<p>3. Food waste exacerbates hunger disparities, with millions lacking access to nutritious meals despite surplus food availability.</p>
+
+<p>4. Despite technological advancements, food distribution inefficiencies persist, leaving many without adequate sustenance.</p>
+
+<p>5. Obesity rates are soaring alongside food waste, signaling systemic issues in food access and nutritional education.</p>
+
+<p>6. Food insecurity affects vulnerable populations disproportionately, including children, seniors, and low-income households.</p>
+
+<p>7. Surplus food redistribution programs exist but often face logistical challenges and lack widespread support.</p>
+
+<p>8. Addressing food waste not only alleviates hunger but also benefits the environment and reduces economic strain.</p>
+
+<p>9. Collaborative efforts involving governments, businesses, and communities are crucial to tackling the complex issue of food insecurity.</p>
+
+<p>10. By raising awareness, supporting food recovery initiatives, and advocating for policy changes, individuals can contribute to lasting solutions for hunger relief.</p>
+                        </div>
+                </div>
+                <!-- <div class="typewriter">
+                        <p>Over 20,000 items of clothing collected and distributed across 4 states.</p>
+                </div>     -->
+
+                <div id="donation-process-div">
+                        <h1>How we work</h1>
+                        <div id="donation-process-scheduled-pickup" class="process-details">
+                                <img src="scheduled-pickup-image.jpg" alt="">
+                                <div class="process-details-text">
+                                        <p>1. Schedule a pickup</p>
+                                        <p>2. We'll come to your doorstep</p>
+                                        <p>3. Collect the food</p>
+
                                 </div>
-                                <div class="bordered divs-to-transform">
-                                        <div class="you-can-donate-to-img-div"> <img
-                                                        id="you-can-donate-to-food-for-animals-img"
-                                                        src="/visuals/homepage/assets/images/you-can-donate-to-food-for-animals-img.jpg"
-                                                        alt=""></div>
-                                        <h2>Food For Animals</h2>
-                                        <div class="you-can-donate-to-msg"></div>
-                                        <a href="/visuals/food for animals/foodAnimals.html">
-                                                Donate Now
-                                        </a>
+                        </div>
+                        <div id="steps-para">
+                                <p>OR</p>
+                        </div>
+                        <div id="donation-process-donate-at-doorsted" class="process-details">
+                                <img src="donate-at-doorstep-img.avif" alt="">
+                                <div class="process-details-text">
+                                        <p>1. Deliver the food at our doorstep</p>
+                                        <p>2. We'll collect it</p>
+                                        <p>3. You're done!
+
                                 </div>
-                                <div class="bordered divs-to-transform">
-                                        <div class="you-can-donate-to-img-div"> <img
-                                                        id="you-can-donate-to-food-for-poor-img"
-                                                        src="/visuals/homepage/assets/images/you-can-donate-to-food-for-poor-img.jpg"
-                                                        alt=""></div>
-                                        <h2>Food For Poor</h2>
-                                        <div class="you-can-donate-to-msg"></div>
-                                        <a href="/visuals/food for poor/foodPoor.html">
-                                                Donate Now
-                                        </a>
+                        </div>
+                        <div id="steps-para">
+                                <p>OR</p>
+                        </div>
+                        <div id="donation-process-our-network" class="process-details">
+                                <img src="our-network-img.jpeg" alt="">
+                                <div class="process-details-text">
+                                        <p>1. We'll connect you with our network of NGOs</p>
+                                        <p>2. Your food will reach those in need through our large network</p>
+                                        <p>3. You've made a difference!</p>
                                 </div>
-                                <div class="bordered divs-to-transform">
-                                        <div class="you-can-donate-to-img-div"> <img
-                                                        id="you-can-donate-to-specially-abled-img"
-                                                        src="/visuals/homepage/assets/images/you-can-donate-to-specially-abled-img.jpg"
-                                                        alt=""></div>
-                                        <h2>Donation For Specially Abled</h2>
-                                        <div class="you-can-donate-to-msg"></div>
-                                        <a href="/visuals/donation for specially abled/speciallyAbled.html">
-                                                Donate Now
-                                        </a>
+                        </div>
+                        <div class="video">
+                                <video src="poor.mp4" autoplay loop controls>
+                        </div>
+                              
+                </div>
+                <div id="cards-container">
+                        <div class="card" id="card1">
+                                <img src="maharashtra-cloth-donation.jpg" alt="" height="100%" width="100%" >
+                                <div class="overlay">
+                                        <h1>GOA</h1>
+                                        <p>1,000 kilograms of produce shared, bringing hope to every table.</p>
                                 </div>
-                                <div class="bordered divs-to-transform">
-                                        <div class="you-can-donate-to-img-div"> <img
-                                                        id="you-can-donate-to-blood-donation-img"
-                                                        src="/visuals/homepage/assets/images/you-can-donate-to-blood-donation-img.jpg"
-                                                        alt=""></div>
-                                        <h2>Donate Blood</h2>
-                                        <div class="you-can-donate-to-msg"></div>
-                                        <a href="/visuals/">
-                                                Donate Now
-                                        </a>
+                        </div>
+                        <div class="card" id="card2">
+                                <img src="assam-cloth-donation.jpg" alt="" height="100%" width="100%" >
+                                <div class="overlay">
+                                        <h1>ASSAM</h1>
+                                        <p>500 kilograms of meals served, warming hearts with every bite.</p>
+                                </div>
+                        </div>
+                        <div class="card" id="card3">
+                                <img src="gujurat-cloth-donation.jpg" alt="" height="100%" width="100%">
+                                <div class="overlay">
+                                        <h1>GUJARAT</h1>
+                                        <p>750 kilograms of cans collected, nourishing souls, building community.</p>
+                                </div>
+                        </div>
+                        <div class="card" id="card4">
+                                <img src="punjab-cloth-donation.jpg" alt="" height="100%" width="100%">
+                                <div class="overlay">
+                                        <h1>PUNJAB</h1>
+                                        <p>1,500 kilograms of groceries distributed, spreading smiles with each contribution.</p>
                                 </div>
                         </div>
                 </div>
-
-                <div id="past-contributions">
-                        <h1>Our ongoing Contributions</h1>
-                        <div id="past-contributions-container">
-                                <div class=" bordered">
-
-                                        <div class="past-contribution-text-content">
-                                                <div class="past-contributions-description-text">Every week, our blood
-                                                        donation drives save an average of 50 lives.</div>
-                                                <a href="">Contribute Now</a>
-                                        </div>
-                                        <div class="past-contribution-imge-divs"><img
-                                                        src="/visuals/homepage/assets/images/blood-donation-past-contribution.avif"
-                                                        alt=""></div>
+                <div id="donor-form-div" >
+                        <h1>Fill the Form below</h1>
+                        <form id="donate-clothes-form" method="post">
+                                <div class="form-group">
+                                        <label for="name">Name:</label>
+                                        <input type="text" id="name" name="name" required style="color: black;">
                                 </div>
-                                <div class=" bordered">
-                                        <div class="past-contribution-imge-divs"><img
-                                                        src="/visuals/homepage/assets/images/donating-clothes-to-poor-image.jpg"
-                                                        alt=""></div>
-                                        <div class="past-contribution-text-content">
-                                                <div class="past-contributions-description-text">We distribute over 1000
-                                                        pieces of clothing to those in need every month.</div>
-                                                <a href="">Contribute Now</a>
-                                        </div>
+                                <div class="form-group">
+                                        <label for="phone">Phone (with country code) :</label>
+                                        <input type="number" id="phone" name="phone" required style="color: black;">
                                 </div>
-                                <div class=" bordered">
-                                        <div class="past-contribution-text-content">
-                                                <div class="past-contributions-description-text">With your help, we
-                                                        provide over 500 meals to both animals and individuals facing
-                                                        hunger every week.</div>
-                                                <a href="">Contribute Now</a>
-                                        </div>
-                                        <div class="past-contribution-imge-divs"><img
-                                                        src="/visuals/homepage/assets/images/donating-food-to-poor.jpg"
-                                                        alt=""></div>
+                                <div class="form-group">
+                                        <label for="address">Address:</label>
+                                        <input type="text" id="address" name="address" required style="color: black;">
                                 </div>
-                                <div class=" bordered">
-                                        <div class="past-contribution-imge-divs"><img
-                                                        src="/visuals/homepage/assets/images/67970915-happy-people-with-disabilities-day-concept-happy-disabled.jpg"
-                                                        alt=""></div>
-                                        <div class="past-contribution-text-content">
-                                                <div class="past-contributions-description-text">Our specialized care
-                                                        programs support over 200 specially abled individuals annually.
-                                                </div>
-                                                <a href="">Contribute Now</a>
-                                        </div>
+                                <div class="form-group">
+                                        <label for="clothes">Amount of food you wish to donate </label>
+                                        <input type="text" id="text" name="text" required style="color: black;">
                                 </div>
-                                <div class=" bordered">
-                                        <div class="past-contribution-text-content">
-                                                <div class="past-contributions-description-text">Through our rescue
-                                                        efforts, we've provided shelter and care for over 300 animals in
-                                                        need.</div>
-                                                <a href="">Contribute Now</a>
-                                        </div>
-                                        <div class="past-contribution-imge-divs"><img
-                                                        src="/visuals/homepage/assets/images/donating-food-to-dog.jpg"
-                                                        alt=""></div>
+                                <div class="form-group">
+                                        <label for="email">Enter Your E-mail</label>
+                                        <input type="email" id="email" name="email" style="color: black;">
                                 </div>
-                                <div class=" bordered">
-                                        <div class="past-contribution-imge-divs"><img
-                                                        src="/visuals/homepage/assets/images/team-ethnicity-group-hands.jpg"
-                                                        alt=""></div>
-                                        <div class="past-contribution-text-content">
-                                                <div class="past-contributions-description-text">In the past year alone,
-                                                        our organization has impacted the lives of over 5000 individuals
-                                                        and animals through our charitable programs</div>
-                                                <a href="">Contribute Now</a>
-                                        </div>
+                                <div class="form-group">
+                                        <label for="special-instructions">Any special Instruction</label>
+                                        <input type="text" id="special-instructions" name="special-instructions" style="color: black;">
                                 </div>
-                        </div>
+                                <button type="submit">Donate</button>
+                        </form>
                 </div>
-
                 <div id="footer">
-                        <div id="footer-left">
-                                <div><img id="logo-img-footer" src="/visuals/homepage/assets/images/logo-img.png"
-                                                alt="">
-                                        <h6>SPREADING HUMANITY</h6>
-                                </div>
-                                <ul id="left-footer-list">
-                                        <li><a href="termsAndConditions.txt">Terms and Conditions</a></li>
-                                        <li><a href="">Privacy Policy</a></li>
-                                        <li><a href="">Refund Policy</a></li>
-                                        <li><a href="">Contact Us</a></li>
-                                </ul>
-                                <div id="footer-regulation-copyright">
-                                        <p>Giving.com trading as JustGiving is authorised and regulated by the Financial
-                                                Conduct
-                                                Authority (FCA) under the Payment Service Regulations 2017.
-                                                Registration number: 793668</p>
-                                        <p>© 2021 Spreading Humanity. All Rights Reserved.</p>
-
-                                </div>
+                        <div id="footer-header"><img id="logo-img-footer" src="logo-img.png" alt="">
+                                <h6>SPREADING HUMANITY</h6>
                         </div>
-                        <div id="footer-right">
-                                <h6>Find Us On</h6>
-                                <ul id="right-footer-list">
-                                        <li><a href="">
-                                                        <div class="footer-img-divs"><img
-                                                                        src="/visuals/homepage/assets/images/instagram-bw-logo3.png"
-                                                                        alt=""></div>
-                                                </a></li>
-                                        <li><a href="">
-                                                        <div class="footer-img-divs"><img
-                                                                        src="/visuals/homepage/assets/images/twitter-transperant.png"
-                                                                        alt=""></div>
-                                                </a></li>
-                                        <li><a href="">
-                                                        <div class="footer-img-divs"><img
-                                                                        src="/visuals/homepage/assets/images/yt2.png"
-                                                                        alt=""></div>
-                                                </a></li>
-                                        <li><a href="">
-                                                        <div class="footer-img-divs"><img
-                                                                        src="/visuals/homepage/assets/images/facebook.png"
-                                                                        alt=""></div>
-                                                </a></li>
-                                </ul>
-                        </div>
+                        <ul id="footer-list">
+                                <li><a href="">Terms and Conditions</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Refund Policy</a></li>
+                                <li><a href="">Contact Us</a></li>
+                        </ul>
                 </div>
         </div>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
-                // you-can-donate-to-msg
-                const donationMessages = [
-                        "Your unwanted clothes can be someone else's treasure.",
-                        "Every bowl filled counts! Donate pet food to ensure no animal goes hungry.",
-                        "Be a beacon of kindness in someone's life by donating food to the poor.",
-                        "Create opportunities for the specially-abled through your donation.",
-                        "Be someone's lifeline by donating blood."
-                ];
+            const donateClothesForm = document.getElementById('donate-clothes-form');
+donateClothesForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(donateClothesForm);
+        const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                address: formData.get('address'),
+                clothes: formData.get('clothes')
+        };
+        console.log(data);
+        donateClothesForm.reset();
+});
 
-                function typeMessage(element, message, speed) {
-                        let i = 0;
-                        const typeInterval = setInterval(() => {
-                                if (i < message.length) {
-                                        element.textContent += message.charAt(i);
-                                        i++;
-                                } else {
-                                        clearInterval(typeInterval);
-                                }
-                        }, speed);
-                }
+var crsr= document.querySelector("#cursor")
+document.addEventListener("mousemove",function(dets){
+    crsr.style.left = dets.x+"px"
+    crsr.style.top = dets.y+"px"
+         
+})
+var crsrblr= document.querySelector("#cursor-blur")
+document.addEventListener("mousemove",function(dets){
+    crsrblr.style.left = dets.x -100 + "px"
+    crsrblr.style.top = dets.y -100 + "px"
+         
+})
 
-                document.querySelectorAll('.you-can-donate-to-msg').forEach((msgElement, index) => {
-                        typeMessage(msgElement, donationMessages[index], 100);
-                });
+gsap.to("nav", {
+        backgroundColor : "#000",
+        height:100,
+        duration:0.5,
+        scrollTrigger:{
+                trigger:"nav",
+                scroller:"body",
+                markers:false,
+                start:"top-10%",
+                scrub:1,
+        }
+})
+// gsap.to(".main" ,{
+//         backgroundColor:"#000",
+//         scrollTrigger:{
+//                 trigger:".main",
+//                 scroller:"body",
+//                 markers:false,
+//                 start:"top-30%",
+//                 end:"end-80%",
+//                 scrub:2,
+//         }
 
+// })
+// Define the ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
-                // Add this JavaScript
-                const hoverBox = document.getElementById('hover-box');
-                const navItems = document.querySelectorAll('nav span');
+// Create a timeline with the background color change
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "body",
+    start: "top top",
+    end: "bottom top",
+    scrub: true
+  }
+});
 
-                // Set initial position to the "Home" section
-                const homeSection = document.getElementById('home');
-                const homeRect = homeSection.getBoundingClientRect();
-                hoverBox.style.transform = `translateX(${homeRect.left}px)`;
-                hoverBox.style.width = `${homeRect.width}px`;
+// Add background color animations to the timeline
+// tl.to("body", { backgroundColor: "#000" });
 
-                // Function to reset the hover box position to the "Home" section
-                function resetHoverBox() {
-                        hoverBox.style.transform = `translateX(${homeRect.left}px)`;
-                        hoverBox.style.width = `${homeRect.width}px`;
-                }
-
-                // Event listeners for each navigation item
-                navItems.forEach(item => {
-                        item.addEventListener('mouseover', function () {
-                                if (this.id != 'logoImg') {
-                                        const rect = this.getBoundingClientRect();
-                                        hoverBox.style.transform = `translateX(${rect.left}px)`;
-                                        hoverBox.style.width = `${rect.width}px`;
-                                }
-                        });
-                        item.addEventListener('mouseleave', resetHoverBox);
-                });
-
-                // Event listener for the navigation bar itself
-                document.querySelector('nav').addEventListener('mouseleave', resetHoverBox);
 
         </script>
+                
 </body>
 
 </html>
