@@ -20,8 +20,8 @@ document.addEventListener("mousemove",function(dets){
 })
 var crsrblr= document.querySelector("#cursor-blur")
 document.addEventListener("mousemove",function(dets){
-    crsrblr.style.left = dets.x -240 + "px"
-    crsrblr.style.top = dets.y -200 + "px"
+    crsrblr.style.left = dets.x -160 + "px"
+    crsrblr.style.top = dets.y -150 + "px"
          
 })
 
@@ -37,7 +37,7 @@ gsap.to("nav", {
                 scrub:1,
         }
 })
-gsap.to("#main" ,{
+/*gsap.to("#main" ,{
         backgroundColor:"#000",
         scrollTrigger:{
                 trigger:"#main",
@@ -48,4 +48,4 @@ gsap.to("#main" ,{
                 scrub:2,
         }
 
-})
+})*/
