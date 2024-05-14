@@ -32,9 +32,6 @@ body {
     background-size: cover;
     /* z-index: -1; */
 }
-#page1{
-   
-}
 .container {
     width: 50vw;
     height: 80vh;
@@ -303,7 +300,7 @@ p#donation-intro-donation-msg{
     color: rgb(5, 82, 85);
 }
 /* Hide the text initially */
-.typewriter p {
+/*.typewriter p {
     height: 600px;
     font-size: 100px;
     font-weight: 600;
@@ -313,26 +310,26 @@ p#donation-intro-donation-msg{
    
     margin: 0 auto; 
     z-index: 99;
-    display:inline-block;
+    display:inline-block;*/
     /* Adjust speed for faster or slower typing effect */
-    animation: typing 4.5s steps(40, end), blink-caret .75s step-end infinite alternate;
+    /*animation: typing 4.5s steps(40, end), blink-caret .75s step-end infinite alternate;
     
     word-wrap: break-word;
 
    
-  }
+  }*/
   
   /* The typing effect */
-  @keyframes typing {
+  /*@keyframes typing {
     from { width: 0 }
     to { width: 100% }
-  }
+  }*/
   
   /* The blinking cursor */
-  @keyframes blink-caret {
+ /* @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: orange; }
-  }
+  }*/
   
 #donation-process-div {
     background-color: rgb(5, 82, 85);
